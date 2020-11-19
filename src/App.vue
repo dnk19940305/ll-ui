@@ -1,45 +1,22 @@
 <template>
   <div id="app">
-    <ul>
-      <li>
-        <Ll-button @click="handleClick" >按钮</Ll-button>
-        <Ll-button type="primary">按钮</Ll-button>
-        <Ll-button type="success">按钮</Ll-button>
-        <Ll-button type="info">按钮</Ll-button>
-        <Ll-button type="warning">按钮</Ll-button>
-        <Ll-button type="danger">按钮</Ll-button>
-      </li>
-      <li>
-        <Ll-button plain >按钮</Ll-button>
-        <Ll-button plain type="primary">按钮</Ll-button>
-        <Ll-button plain type="success">按钮</Ll-button>
-        <Ll-button plain type="info">按钮</Ll-button>
-        <Ll-button plain type="warning">按钮</Ll-button>
-        <Ll-button plain type="danger">按钮</Ll-button>
-      </li>
-      <li>
-        <Ll-button round >按钮</Ll-button>
-        <Ll-button round type="primary">按钮</Ll-button>
-        <Ll-button round type="success">按钮</Ll-button>
-        <Ll-button round type="info">按钮</Ll-button>
-        <Ll-button round type="warning">按钮</Ll-button>
-        <Ll-button round type="danger">按钮</Ll-button>
-      </li>
-      <li>
-        <Ll-button circle >按钮</Ll-button>
-        <Ll-button circle type="primary">按钮</Ll-button>
-        <Ll-button circle type="success">按钮</Ll-button>
-        <Ll-button circle type="info">按钮</Ll-button>
-        <Ll-button circle type="warning">按钮</Ll-button>
-        <Ll-button circle type="danger">按钮</Ll-button>
-      </li>
-    </ul>
+    <ll-input clearable placeholder="请输入用户名" v-model="username" ></ll-input>
+    <ll-input showPassword  type='password' v-model="password" placeholder="请输入密码" ></ll-input>
+    <ll-switch active-color='red'  v-model="active"></ll-switch>
+    <ll-switch active-color='red' inactive-color='lightgreen' v-model="active"></ll-switch>
   </div>
 </template>
 
 <script>
 export default {
   name: 'App',
+  data () {
+    return {
+      username: '123',
+      password: '123',
+      active: false
+    }
+  },
   components: {},
   methods: {
     handleClick () {
@@ -50,5 +27,9 @@ export default {
 </script>
 
 <style lang="scss">
-
+#app{
+  .ll-input{
+    width: 180px;
+  }
+}
 </style>

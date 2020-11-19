@@ -67,9 +67,9 @@ export default {
     margin: 0;
     transition: .1s;
     font-weight: 500;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
+    -moz-user-sllect: none;
+    -webkit-user-sllect: none;
+    -ms-user-sllect: none;
     padding: 12px 20px;
     font-size: 14px;
     border-radius: 4px;
@@ -87,6 +87,13 @@ export default {
     border-color: #409eff;
     color: #409eff;
   }
+}
+.ll-button.is-disabled, .ll-button.is-disabled:focus, .ll-button.is-disabled:hover {
+    color: #c0c4cc;
+    cursor: not-allowed;
+    background-image: none;
+    background-color: #fff;
+    border-color: #ebeef5;
 }
 .ll-button--primary {
     color: #fff;
@@ -110,6 +117,11 @@ export default {
       color: #fff;
     }
 }
+.ll-button--primary.is-disabled, .ll-button--primary.is-disabled:active, .ll-button--primary.is-disabled:focus, .ll-button--primary.is-disabled:hover {
+    color: #fff;
+    background-color: #a0cfff;
+    border-color: #a0cfff;
+}
 .ll-button--success {
     color: #fff;
     background-color: #67c23a;
@@ -131,6 +143,11 @@ export default {
       border-color: #67c23a;
       color: #fff;
     }
+}
+.ll-button--success.is-disabled, .ll-button--success.is-disabled:active, .ll-button--success.is-disabled:focus, .ll-button--success.is-disabled:hover {
+    color: #fff;
+    background-color: #b3e19d;
+    border-color: #b3e19d;
 }
 .ll-button--info {
     color: #fff;
@@ -154,6 +171,11 @@ export default {
       color: #fff;
     }
 }
+.ll-button--info.is-disabled, .ll-button--info.is-disabled:active, .ll-button--info.is-disabled:focus, .ll-button--info.is-disabled:hover {
+    color: #fff;
+    background-color: #c8c9cc;
+    border-color: #c8c9cc;
+}
 .ll-button--warning {
     color: #fff;
     background-color: #e6a23c;
@@ -175,6 +197,11 @@ export default {
       background-color: #e6a23c;
       border-color: #e6a23c;
     }
+}
+.ll-button--warning.is-disabled, .ll-button--warning.is-disabled:active, .ll-button--warning.is-disabled:focus, .ll-button--warning.is-disabled:hover {
+    color: #fff;
+    background-color: #f3d19e;
+    border-color: #f3d19e;
 }
 .ll-button--danger {
     color: #fff;
@@ -198,6 +225,11 @@ export default {
       color: #fff;
     }
 }
+.ll-button--danger.is-disabled, .ll-button--danger.is-disabled:active, .ll-button--danger.is-disabled:focus, .ll-button--danger.is-disabled:hover {
+    color: #fff;
+    background-color: #fab6b6;
+    border-color: #fab6b6;
+}
 .ll-button.is-round {
     border-radius: 20px;
     padding: 12px 23px;
@@ -205,5 +237,8 @@ export default {
 .ll-button.is-circle {
     border-radius: 50%;
     padding: 12px;
+}
+.ll-button [class*=ll-icon-]+span{
+  margin-left: 5px;
 }
 </style>
